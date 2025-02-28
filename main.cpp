@@ -20,7 +20,7 @@ int main(int argc, char *argv[]) {
     }
 
     double num1 = std::atof(argv[1]);
-    std::string oper = argv[2];
+    char oper = argv[2][0];
     double num2 = std::atof(argv[3]);
     double result;
 
@@ -42,7 +42,7 @@ int main(int argc, char *argv[]) {
             return 1;
     }
 
-    std::cout << "Result: " << wynik << std::endl;
+    std::cout << "Result: " << result << std::endl;
     return 0;
 }
 
@@ -60,7 +60,7 @@ double multiply_numbers(double num1, double num2) {
 
 double divide_numbers(double num1, double num2) {
     if (num2 == 0) {
-        std::cerr << "Fatal Error: Dividing by zero is absolutely forbidden!"
+        std::cerr << "Fatal Error: Dividing by zero is absolutely forbidden!";
         return 1;
     }
 
